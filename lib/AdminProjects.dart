@@ -68,7 +68,7 @@ class _DesktopAdminProjectsState extends State<DesktopAdminProjects> {
                       margin: EdgeInsets.fromLTRB(0, 0, width * 0.015, 0),
                       child: FlatButton.icon(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>AddProject()));
+                          Navigator.pushNamed(context, '/addProject');
                         },
                         hoverColor: Colors.transparent,
                         icon: Icon(
