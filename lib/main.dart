@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
-
 import 'AdminDashboard.dart';
-
+import 'Login.dart';
 void main() => runApp(MyApp());
-
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Project Management System',
       theme: ThemeData(
-        primaryColor: Colors.blueGrey[800],
-        fontFamily: 'Roboto',
+        primaryColor: Colors.blue,
+        fontFamily: 'Roboto'
       ),
-      home: AdminDashboard(),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => Login(),
+        '/adminDashboard' : (context) => AdminDashboard(),
+      },
     );
   }
 }
