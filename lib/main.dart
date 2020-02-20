@@ -11,7 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Project Management System',
-      theme: ThemeData(primaryColor: Colors.blue, fontFamily: 'Roboto'),
+      theme: ThemeData(
+        primaryColor: Colors.blueGrey[800],
+        fontFamily: 'Roboto',
+      ),
       initialRoute: '/',
       routes: {
         '/': (context) => Login(),
