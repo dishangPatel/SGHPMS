@@ -65,7 +65,9 @@ class _DesktopAdminEmployeesState extends State<DesktopAdminEmployees> {
                     Container(
                       margin: EdgeInsets.fromLTRB(width * 0.02, 0, 0, 0),
                       child: FlatButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          // addEmployee();
+                        },
                         hoverColor: Colors.transparent,
                         icon: Icon(
                           Icons.add_circle_outline,
