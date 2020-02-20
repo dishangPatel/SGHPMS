@@ -319,6 +319,254 @@ class MobileAdminEmployees extends StatefulWidget {
 class _MobileAdminEmployeesState extends State<MobileAdminEmployees> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  child: FlatButton.icon(
+                    onPressed: () {},
+                    hoverColor: Colors.transparent,
+                    icon: Icon(
+                      Icons.add_circle_outline,
+                      color: Colors.blue,
+                    ),
+                    label: Text(
+                      'Add Employee',
+                      style: TextStyle(
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            ListView(
+              physics: ClampingScrollPhysics(),
+              shrinkWrap: true,
+              children: <Widget>[
+                Container(
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text(
+                                  'Employee Name',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'Post',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.view_quilt,
+                                    color: Colors.green,
+                                  ),
+                                  label: Text(
+                                    'View',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.cancel,
+                                    color: Colors.red,
+                                  ),
+                                  label: Text(
+                                    'Remove',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text(
+                                  'Employee Name',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'Post',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.view_quilt,
+                                    color: Colors.green,
+                                  ),
+                                  label: Text(
+                                    'View',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.cancel,
+                                    color: Colors.red,
+                                  ),
+                                  label: Text(
+                                    'Remove',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text(
+                                  'Employee Name',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'Post',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.view_quilt,
+                                    color: Colors.green,
+                                  ),
+                                  label: Text(
+                                    'View',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.cancel,
+                                    color: Colors.red,
+                                  ),
+                                  label: Text(
+                                    'Remove',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

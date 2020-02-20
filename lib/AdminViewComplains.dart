@@ -85,7 +85,7 @@ class _DesktopAdminViewComplainsState extends State<DesktopAdminViewComplains> {
                                       ),
                                     ),
                                     Text(
-                                      'Start Date - End Date',
+                                      'Date: ',
                                       style: TextStyle(
                                         fontSize: width * 0.01,
                                         fontWeight: FontWeight.bold,
@@ -119,204 +119,6 @@ class _DesktopAdminViewComplainsState extends State<DesktopAdminViewComplains> {
                                 TextField(
                                   decoration: InputDecoration(
                                     hintText: 'Remarks',
-                                    border: OutlineInputBorder(),
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    FlatButton.icon(
-                                      onPressed: () {},
-                                      hoverColor: Colors.transparent,
-                                      icon: Icon(
-                                        Icons.check,
-                                        color: Colors.green,
-                                      ),
-                                      label: Text(
-                                        'Accept',
-                                        style: TextStyle(
-                                          fontSize: width * 0.0125,
-                                        ),
-                                      ),
-                                    ),
-                                    FlatButton.icon(
-                                      onPressed: () {},
-                                      hoverColor: Colors.transparent,
-                                      icon: Icon(
-                                        Icons.cancel,
-                                        color: Colors.red,
-                                      ),
-                                      label: Text(
-                                        'Reject',
-                                        style: TextStyle(
-                                          fontSize: width * 0.0125,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: width * 0.025),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Card(
-                          child: Padding(
-                            padding: EdgeInsets.all(20.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Text(
-                                      'Complainer Name',
-                                      style: TextStyle(
-                                        fontSize: width * 0.0125,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      'Start Date - End Date',
-                                      style: TextStyle(
-                                        fontSize: width * 0.01,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Text(
-                                  'Project Name',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Text(
-                                  'Description',
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                TextField(
-                                  decoration: InputDecoration(
-                                    hintText: 'Remarks',
-                                    border: OutlineInputBorder(),
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    FlatButton.icon(
-                                      onPressed: () {},
-                                      hoverColor: Colors.transparent,
-                                      icon: Icon(
-                                        Icons.check,
-                                        color: Colors.green,
-                                      ),
-                                      label: Text(
-                                        'Accept',
-                                        style: TextStyle(
-                                          fontSize: width * 0.0125,
-                                        ),
-                                      ),
-                                    ),
-                                    FlatButton.icon(
-                                      onPressed: () {},
-                                      hoverColor: Colors.transparent,
-                                      icon: Icon(
-                                        Icons.cancel,
-                                        color: Colors.red,
-                                      ),
-                                      label: Text(
-                                        'Reject',
-                                        style: TextStyle(
-                                          fontSize: width * 0.0125,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: width * 0.025),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Card(
-                          child: Padding(
-                            padding: EdgeInsets.all(20.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Text(
-                                      'Complainer Name',
-                                      style: TextStyle(
-                                        fontSize: width * 0.0125,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      'Start Date - End Date',
-                                      style: TextStyle(
-                                        fontSize: width * 0.01,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Text(
-                                  'Project Name',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Text(
-                                  'Description',
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                TextField(
-                                  decoration: InputDecoration(
-                                    labelText: 'Remarks',
                                     border: OutlineInputBorder(),
                                   ),
                                 ),
@@ -379,6 +181,119 @@ class MobileAdminViewComplains extends StatefulWidget {
 class _MobileAdminViewComplainsState extends State<MobileAdminViewComplains> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            ListView(
+              physics: ClampingScrollPhysics(),
+              shrinkWrap: true,
+              children: <Widget>[
+                Container(
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text(
+                                  'Complainer Name',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'Date:',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'Project Name',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'Description',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                hintText: 'Remarks',
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.check,
+                                    color: Colors.green,
+                                  ),
+                                  label: Text(
+                                    'Accept',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.cancel,
+                                    color: Colors.red,
+                                  ),
+                                  label: Text(
+                                    'Reject',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

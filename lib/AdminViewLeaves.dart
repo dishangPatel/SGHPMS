@@ -58,258 +58,36 @@ class _DesktopAdminViewLeavesState extends State<DesktopAdminViewLeaves> {
                     ),
                   ],
                 ),
-                ListView(
-                  shrinkWrap: true,
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: width * 0.025),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Card(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(20.0, 0, 20.0, 20.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
-                                  children: <Widget>[
-                                    Expanded(
-                                      flex: 5,
-                                      child: Text(
-                                        'Employee Name',
-                                        style: TextStyle(
-                                          fontSize: width * 0.0125,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 5,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: <Widget>[
-                                          FlatButton.icon(
-                                            onPressed: () {},
-                                            hoverColor: Colors.transparent,
-                                            icon: Icon(
-                                              Icons.check,
-                                              color: Colors.green,
-                                            ),
-                                            label: Text(
-                                              'Accept',
-                                              style: TextStyle(
-                                                fontSize: width * 0.0125,
-                                              ),
-                                            ),
-                                          ),
-                                          FlatButton.icon(
-                                            onPressed: () {},
-                                            hoverColor: Colors.transparent,
-                                            icon: Icon(
-                                              Icons.cancel,
-                                              color: Colors.red,
-                                            ),
-                                            label: Text(
-                                              'Reject',
-                                              style: TextStyle(
-                                                fontSize: width * 0.0125,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  'From - Till',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Text(
-                                  'Reason',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: width * 0.025),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Card(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(20.0, 0, 20.0, 20.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
-                                  children: <Widget>[
-                                    Expanded(
-                                      flex: 5,
-                                      child: Text(
-                                        'Employee Name',
-                                        style: TextStyle(
-                                          fontSize: width * 0.0125,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 5,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: <Widget>[
-                                          FlatButton.icon(
-                                            onPressed: () {},
-                                            hoverColor: Colors.transparent,
-                                            icon: Icon(
-                                              Icons.check,
-                                              color: Colors.green,
-                                            ),
-                                            label: Text(
-                                              'Accept',
-                                              style: TextStyle(
-                                                fontSize: width * 0.0125,
-                                              ),
-                                            ),
-                                          ),
-                                          FlatButton.icon(
-                                            onPressed: () {},
-                                            hoverColor: Colors.transparent,
-                                            icon: Icon(
-                                              Icons.cancel,
-                                              color: Colors.red,
-                                            ),
-                                            label: Text(
-                                              'Reject',
-                                              style: TextStyle(
-                                                fontSize: width * 0.0125,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  'From - Till',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Text(
-                                  'Reason',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: width * 0.025),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Card(
-                          child: Padding(
-                            padding: EdgeInsets.fromLTRB(20.0, 0, 20.0, 20.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Row(
-                                  children: <Widget>[
-                                    Expanded(
-                                      flex: 5,
-                                      child: Text(
-                                        'Employee Name',
-                                        style: TextStyle(
-                                          fontSize: width * 0.0125,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 5,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: <Widget>[
-                                          FlatButton.icon(
-                                            onPressed: () {},
-                                            hoverColor: Colors.transparent,
-                                            icon: Icon(
-                                              Icons.check,
-                                              color: Colors.green,
-                                            ),
-                                            label: Text(
-                                              'Accept',
-                                              style: TextStyle(
-                                                fontSize: width * 0.0125,
-                                              ),
-                                            ),
-                                          ),
-                                          FlatButton.icon(
-                                            onPressed: () {},
-                                            hoverColor: Colors.transparent,
-                                            icon: Icon(
-                                              Icons.cancel,
-                                              color: Colors.red,
-                                            ),
-                                            label: Text(
-                                              'Reject',
-                                              style: TextStyle(
-                                                fontSize: width * 0.0125,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  'From - Till',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Text(
-                                  'Reason',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                DataTable(
+                  columns: [
+                    DataColumn(label: Text('Employee Name')),
+                    DataColumn(label: Text('Reason')),
+                    DataColumn(label: Text('Start Date')),
+                    DataColumn(label: Text('End Date')),
+                    DataColumn(label: Text('View More')),
+                  ],
+                  rows: [
+                    DataRow(cells: [
+                      DataCell(Text('Parth')),
+                      DataCell(Text('Sister\'s Engagement')),
+                      DataCell(Text('12-01-2020')),
+                      DataCell(Text('16-01-2020')),
+                      DataCell(Icon(Icons.more_horiz)),
+                    ]),
+                    DataRow(cells: [
+                      DataCell(Text('Parth')),
+                      DataCell(Text('Sister\'s Engagement')),
+                      DataCell(Text('12-01-2020')),
+                      DataCell(Text('16-01-2020')),
+                      DataCell(Icon(Icons.more_horiz)),
+                    ]),
+                    DataRow(cells: [
+                      DataCell(Text('Parth')),
+                      DataCell(Text('Sister\'s Engagement')),
+                      DataCell(Text('12-01-2020')),
+                      DataCell(Text('16-01-2020')),
+                      DataCell(Icon(Icons.more_horiz)),
+                    ]),
                   ],
                 ),
               ],
@@ -329,6 +107,244 @@ class MobileAdminViewLeaves extends StatefulWidget {
 class _MobileAdminViewLeavesState extends State<MobileAdminViewLeaves> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            ListView(
+              physics: ClampingScrollPhysics(),
+              shrinkWrap: true,
+              children: <Widget>[
+                Container(
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              'Employee Name',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'From - Till',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'Reason',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.check,
+                                    color: Colors.green,
+                                  ),
+                                  label: Text(
+                                    'Accept',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.cancel,
+                                    color: Colors.red,
+                                  ),
+                                  label: Text(
+                                    'Reject',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              'Employee Name',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'From - Till',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'Reason',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.check,
+                                    color: Colors.green,
+                                  ),
+                                  label: Text(
+                                    'Accept',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.cancel,
+                                    color: Colors.red,
+                                  ),
+                                  label: Text(
+                                    'Reject',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: InkWell(
+                    onTap: () {},
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              'Employee Name',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'From - Till',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              'Reason',
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: <Widget>[
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.check,
+                                    color: Colors.green,
+                                  ),
+                                  label: Text(
+                                    'Accept',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                FlatButton.icon(
+                                  onPressed: () {},
+                                  hoverColor: Colors.transparent,
+                                  icon: Icon(
+                                    Icons.cancel,
+                                    color: Colors.red,
+                                  ),
+                                  label: Text(
+                                    'Reject',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
