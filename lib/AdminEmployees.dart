@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'AddEmployee.dart';
 
 class AdminEmployees extends StatefulWidget {
   @override
@@ -66,7 +67,7 @@ class _DesktopAdminEmployeesState extends State<DesktopAdminEmployees> {
                       margin: EdgeInsets.fromLTRB(width * 0.02, 0, 0, 0),
                       child: FlatButton.icon(
                         onPressed: () {
-                          // addEmployee();
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>AddEmployee()));
                         },
                         hoverColor: Colors.transparent,
                         icon: Icon(
