@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_management_system/AddProject.dart';
+// import 'package:project_management_system/AddProject.dart';
 import 'Constants.dart';
 
 
@@ -35,28 +35,47 @@ class _DesktopAddEmployeeState extends State<DesktopAddEmployee> {
   @override
   Widget build(BuildContext context) {
 
-    List<String> managerList = [
-      'Parth',
-      'Dishang',
-      'Nikhil',
-      'Faizal',
-      'Bhavik',
-      'Nisarg'
+    String validatePassword(String value) {
+    if (value.isEmpty) {
+      return 'Password is required';
+    }
+    if (value.length < 8) {
+      return 'Password too short';
+    }
+    return null;
+  }
+
+    final addEmployeeFormKey = GlobalKey<FormState>(); 
+    bool addEmployeeFormAutoValidation = false;
+    String emailID='',
+    password='',
+    confirmPassword='',
+    fname='',
+    lname='',
+    post='',
+    field='',
+    mobileNo='',
+    address='';
+    
+    List<String> postList = [
+      'Developer',
+      'Team Leader',
+      'Project Manager',
     ];
 
+    List<String> fieldList = ['Development','QA'];
     var media = MediaQuery.of(context);
     var width = media.size.width;
     var height = media.size.height;
-    var _firstDate = ValueNotifier<DateTime>(DateTime.now());
-    var _startDate = TextEditingController();
-    var _endDate = TextEditingController();
-    var dropvalue;
+    var dropPost,dropField;
 
     return Scaffold(
       body: StatefulBuilder(
         builder: (context, setDropDownState){
           return Container(
            child: Form(
+             key: addEmployeeFormKey,
+             autovalidate: addEmployeeFormAutoValidation, 
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 250.0, vertical: 20.0),
@@ -64,11 +83,18 @@ class _DesktopAddEmployeeState extends State<DesktopAddEmployee> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
+                    Text(
+                      "Employee's Details",
+                      style: TextStyle(fontSize: 35.0),
+                    ),
+                    SizedBox(height: 30.0,),
                     TextFormField(
                       keyboardType: TextInputType.text,
+                      onSaved: (value) => fname = value,
+                      
                       decoration: kTextFieldDecoration.copyWith(
-                        labelText: 'Project Name',
-                        hintText: 'Enter Project Name',
+                        labelText: 'First Name',
+                        hintText: 'Enter First Name',
                         prefixIcon: Icon(Icons.title),
                       ),
                     ),
@@ -77,124 +103,115 @@ class _DesktopAddEmployeeState extends State<DesktopAddEmployee> {
                     ),
                     TextFormField(
                       keyboardType: TextInputType.text,
-                      maxLines: 4,
+                      onSaved: (value)=>lname=value,
                       decoration: kTextFieldDecoration.copyWith(
-                        border: OutlineInputBorder(
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(width * 0.001)),
-                        ),
-                        labelText: 'Description',
-                        hintText: 'Enter Project Description',
-                        prefixIcon: Icon(Icons.description),
+                        labelText:'Last Name',
+                        hintText: 'Enter Last Name',
+                        prefixIcon: Icon(Icons.title),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
-                    Row(
-                      children: <Widget>[
-                        Expanded(
-                          flex: 2,
-                          child: Text('Start Date:'),
-                        ),
-                        Expanded(
-                          flex: 8,
-                          child: InkWell(
-                            onTap: () async {
-                              _firstDate.value = DateTime.now();
-                              final _selectedDate = await showDatePicker(
-                                context: context,
-                                initialDate: _firstDate.value,
-                                firstDate: DateTime.now(),
-                                lastDate: DateTime(2023),
-                              );
-
-                              if (_selectedDate != null) {
-                                _firstDate.value = _selectedDate;
-
-                                List<String> date =
-                                    _selectedDate.toString().split(" ");
-                                _startDate.text = date[0];
-                              }
-                            },
-                            borderRadius: BorderRadius.circular(width * 0.02),
-                            child: TextFormField(
-                              enabled: false,
-                              keyboardType: TextInputType.text,
-                              controller: _startDate,
-                              decoration: kTextFieldDecoration.copyWith(
-                                labelText: 'Select Date',
-                                hintText: 'Select Date',
-                                prefixIcon: Icon(Icons.calendar_today),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                    TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      onSaved: (value)=>emailID=value,
+                      decoration: kTextFieldDecoration.copyWith(
+                        labelText:'Email Address',
+                        hintText: 'Enter email address',
+                        prefixIcon: Icon(Icons.email),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    TextFormField(
+                      obscureText: true,
+                      validator: validatePassword,
+                      onSaved: (value)=>password=value.trim(),
+                      decoration: kTextFieldDecoration.copyWith(
+                        labelText:'Password',
+                        hintText: 'Enter Password',
+                        prefixIcon: Icon(Icons.lock),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    TextFormField(
+                       obscureText: true,
+                       validator: (value){
+                            confirmPassword = value.trim();
+                           if(confirmPassword==password)
+                           {
+                             return null;
+                           }
+                           else{
+                             return "passwords does not match";
+                           }
+                       }, 
+                       onSaved: (newValue) => confirmPassword=newValue.trim(),     
+                       decoration: kTextFieldDecoration.copyWith(
+                         labelText:'Confirm Password',
+                         hintText: 'Enter Confirm Password',
+                         prefixIcon: Icon(Icons.lock),
+                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
                     Row(
-                      children: <Widget>[
-                        Expanded(
-                          flex: 2,
-                          child: Text('End Date:'),
-                        ),
-                        Expanded(
-                          flex: 8,
-                          child: InkWell(
-                            onTap: () async {
-                              final _selectedDate = await showDatePicker(
-                                context: context,
-                                initialDate: _firstDate.value,
-                                firstDate: _firstDate.value,
-                                lastDate: DateTime(2023),
-                              );
-
-                              if (_selectedDate != null) {
-                                _firstDate.value = _selectedDate;
-
-                                List<String> date =
-                                    _selectedDate.toString().split(" ");
-                                _endDate.text = date[0];
-                              }
-                            },
-                            borderRadius: BorderRadius.circular(width * 0.02),
-                            child: TextFormField(
-                              enabled: false,
-                              keyboardType: TextInputType.text,
-                              controller: _endDate,
-                              decoration: kTextFieldDecoration.copyWith(
-                                labelText: 'Select Date',
-                                hintText: 'Select Date',
-                                prefixIcon: Icon(Icons.calendar_today),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: Text('Assign Post:'),
                     ),
-                    SizedBox(
-                      height: 20.0,
+                    Expanded(
+                      flex: 8,
+                      child: DropdownButtonFormField<String>(
+                        value: dropPost,
+                        onSaved: (value) => dropPost = value,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: width * 0.02,
+                        hint: Text('Select Post'),
+                        elevation: (width * 0.01).toInt(),
+                        isExpanded: true,
+                        items: postList
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                        onChanged: (value) {
+                          setDropDownState(() {
+                            dropPost = value;
+                          });
+                        },
+                      ),
                     ),
-                    Row(
-                      children: <Widget>[
-                        Expanded(
-                          flex: 2,
-                          child: Text('Assign Project To:'),
-                        ),
-                        Expanded(
-                          flex: 8,
-                          child: DropdownButtonFormField<String>(
-                            value: dropvalue,
-                            onSaved: (value) => dropvalue = value,
+                  ],
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 2,
+                        child: Text('Field:'),
+                      ),
+                      Expanded(
+                        flex: 8,
+                        child: DropdownButtonFormField<String>(
+                          value: dropField,
+                            onSaved: (value) => dropField = value,
                             icon: Icon(Icons.arrow_drop_down),
                             iconSize: width * 0.02,
-                            hint: Text('Select Manager'),
+                            hint: Text('Select Field'),
                             elevation: (width * 0.06).toInt(),
                             isExpanded: true,
-                            items: managerList
+                            items: fieldList
                                 .map<DropdownMenuItem<String>>((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
@@ -203,7 +220,7 @@ class _DesktopAddEmployeeState extends State<DesktopAddEmployee> {
                             }).toList(),
                             onChanged: (value) {
                               setDropDownState(() {
-                                dropvalue = value;
+                                dropField = value;
                               });
                             },
                           ),
@@ -219,6 +236,7 @@ class _DesktopAddEmployeeState extends State<DesktopAddEmployee> {
                         children: <Widget>[
                           Expanded(
                             child: FlatButton(
+                               hoverColor: Colors.blueGrey,
                               child: Text(
                                 'Create',
                                 style: TextStyle(
@@ -231,6 +249,7 @@ class _DesktopAddEmployeeState extends State<DesktopAddEmployee> {
                           ),
                           Expanded(
                             child: FlatButton(
+                              hoverColor: Colors.red[200],
                               child: Text(
                                 'Cancel',
                                 style: TextStyle(
@@ -265,7 +284,6 @@ class _MobileAddEmployeeState extends State<MobileAddEmployee> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
     );
   }
 }
