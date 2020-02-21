@@ -287,6 +287,16 @@ class _DesktopViewProjectDetailsState extends State<DesktopViewProjectDetails> {
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 70.0,
+                  ),
+                  Center(
+                    child: RaisedButton.icon(
+                      onPressed: null,
+                      icon: Icon(Icons.picture_as_pdf),
+                      label: Text('Generate Report'),
+                    ),
+                  ),
                 ],
               ),
             ),
