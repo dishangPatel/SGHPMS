@@ -58,9 +58,9 @@ class _DesktopAdminCallMeetingState extends State<DesktopAdminCallMeeting> {
     if (_selectedTime == null) return "";
 
     _selected = _selectedTime.toString();
-    List<String> time = _selected.split("TimeOfDay(");
-    time = time[1].split(")");
-    return time[0];
+    _selected = _selected.substring(12,17);
+    print(_selected);
+    return _selected;
   }
 
   void callMeeting() {
@@ -100,7 +100,7 @@ class _DesktopAdminCallMeetingState extends State<DesktopAdminCallMeeting> {
                                   onSaved: (value) => dropvalue = value,
                                   icon: Icon(Icons.arrow_drop_down),
                                   iconSize: width * 0.02,
-                                  hint: Text('Select Manager'),
+                                  hint: Text('Select Project'),
                                   elevation: (width * 0.06).toInt(),
                                   isExpanded: true,
                                   items: projectList
