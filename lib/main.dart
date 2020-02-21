@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_management_system/AddProject.dart';
+import 'package:project_management_system/SearchProject.dart';
 import 'AdminDashboard.dart';
 import 'Login.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => Login(),
         '/adminDashboard': (context) => AdminDashboard(),
         '/addProject': (context) => AddProject(),
+        '/searchProject': (context) => SeachProject(),
       },
     );
   }

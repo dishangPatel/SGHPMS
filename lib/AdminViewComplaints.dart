@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
 
-class AdminViewComplains extends StatefulWidget {
+class AdminViewComplaints extends StatefulWidget {
   @override
-  _AdminViewComplainsState createState() => _AdminViewComplainsState();
+  _AdminViewComplaintsState createState() => _AdminViewComplaintsState();
 }
 
-class _AdminViewComplainsState extends State<AdminViewComplains> {
+class _AdminViewComplaintsState extends State<AdminViewComplaints> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 800) {
-          return DesktopAdminViewComplains();
+          return DesktopAdminViewComplaints();
         } else {
-          return MobileAdminViewComplains();
+          return MobileAdminViewComplaints();
         }
       },
     );
   }
 }
 
-class DesktopAdminViewComplains extends StatefulWidget {
+class DesktopAdminViewComplaints extends StatefulWidget {
   @override
-  _DesktopAdminViewComplainsState createState() =>
-      _DesktopAdminViewComplainsState();
+  _DesktopAdminViewComplaintsState createState() =>
+      _DesktopAdminViewComplaintsState();
 }
 
-class _DesktopAdminViewComplainsState extends State<DesktopAdminViewComplains> {
+class _DesktopAdminViewComplaintsState extends State<DesktopAdminViewComplaints> {
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context);
@@ -172,13 +172,13 @@ class _DesktopAdminViewComplainsState extends State<DesktopAdminViewComplains> {
   }
 }
 
-class MobileAdminViewComplains extends StatefulWidget {
+class MobileAdminViewComplaints extends StatefulWidget {
   @override
-  _MobileAdminViewComplainsState createState() =>
-      _MobileAdminViewComplainsState();
+  _MobileAdminViewComplaintsState createState() =>
+      _MobileAdminViewComplaintsState();
 }
 
-class _MobileAdminViewComplainsState extends State<MobileAdminViewComplains> {
+class _MobileAdminViewComplaintsState extends State<MobileAdminViewComplaints> {
   @override
   Widget build(BuildContext context) {
     return Container(

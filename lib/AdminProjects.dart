@@ -61,13 +61,29 @@ class _DesktopAdminProjectsState extends State<DesktopAdminProjects> {
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, width * 0.015, 0),
-                      child: FlatButton.icon(
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: width * 0.025),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      FlatButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/searchProject');
+                        },
+                        hoverColor: Colors.transparent,
+                        icon: Icon(
+                          Icons.search,
+                          color: Colors.blueGrey,
+                        ),
+                        label: Text(
+                          'Search Project',
+                          style: TextStyle(
+                            fontSize: width * 0.0125,
+                          ),
+                        ),
+                      ),
+                      FlatButton.icon(
                         onPressed: () {
                           Navigator.pushNamed(context, '/addProject');
                         },
@@ -83,8 +99,8 @@ class _DesktopAdminProjectsState extends State<DesktopAdminProjects> {
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -275,8 +291,10 @@ class _DesktopAdminProjectsState extends State<DesktopAdminProjects> {
                                       MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
                                         Text(
                                           'Project Manager Name',
