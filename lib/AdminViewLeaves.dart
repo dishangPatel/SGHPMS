@@ -59,35 +59,157 @@ class _DesktopAdminViewLeavesState extends State<DesktopAdminViewLeaves> {
                   ],
                 ),
                 DataTable(
+                  columnSpacing: 120.0,
                   columns: [
-                    DataColumn(label: Text('Employee Name')),
-                    DataColumn(label: Text('Reason')),
-                    DataColumn(label: Text('Start Date')),
-                    DataColumn(label: Text('End Date')),
-                    DataColumn(label: Text('View More')),
+                    DataColumn(
+                      label: Text(
+                        'Employee Name',
+                        style: TextStyle(
+                          fontSize: width * 0.012,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Reason',
+                        style: TextStyle(
+                          fontSize: width * 0.012,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Start Date',
+                        style: TextStyle(
+                          fontSize: width * 0.012,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'End Date',
+                        style: TextStyle(
+                          fontSize: width * 0.012,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ],
                   rows: [
-                    DataRow(cells: [
-                      DataCell(Text('Parth')),
-                      DataCell(Text('Sister\'s Engagement')),
-                      DataCell(Text('12-01-2020')),
-                      DataCell(Text('16-01-2020')),
-                      DataCell(Icon(Icons.more_horiz)),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(Text('Parth')),
-                      DataCell(Text('Sister\'s Engagement')),
-                      DataCell(Text('12-01-2020')),
-                      DataCell(Text('16-01-2020')),
-                      DataCell(Icon(Icons.more_horiz)),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(Text('Parth')),
-                      DataCell(Text('Sister\'s Engagement')),
-                      DataCell(Text('12-01-2020')),
-                      DataCell(Text('16-01-2020')),
-                      DataCell(Icon(Icons.more_horiz)),
-                    ]),
+                    DataRow(
+                      cells: [
+                        DataCell(
+                          Text(
+                            'Parth',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                          onTap: () {},
+                        ),
+                        DataCell(
+                          Text(
+                            'Sister\'s Engagement',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                        DataCell(
+                          Text(
+                            '12-01-2020',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                        DataCell(
+                          Text(
+                            '16-01-2020',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    DataRow(
+                      cells: [
+                        DataCell(
+                          Text(
+                            'Parth',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                          onTap: () {},
+                        ),
+                        DataCell(
+                          Text(
+                            'Sister\'s Engagement',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                        DataCell(
+                          Text(
+                            '12-01-2020',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                        DataCell(
+                          Text(
+                            '16-01-2020',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    DataRow(
+                      cells: [
+                        DataCell(
+                          Text(
+                            'Parth',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                          onTap: () {},
+                        ),
+                        DataCell(
+                          Text(
+                            'Sister\'s Engagement',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                        DataCell(
+                          Text(
+                            '12-01-2020',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                        DataCell(
+                          Text(
+                            '16-01-2020',
+                            style: TextStyle(
+                              fontSize: width * 0.012,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_management_system/AddProject.dart';
-
+import 'package:percent_indicator/percent_indicator.dart';
+import 'package:project_management_system/ViewProjectDetails.dart';
 
 class AdminProjects extends StatefulWidget {
   @override
@@ -233,7 +234,12 @@ class _DesktopAdminProjectsState extends State<DesktopAdminProjects> {
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: width * 0.025),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ViewProjectDetails()));
+                        },
                         child: Card(
                           child: Padding(
                             padding: EdgeInsets.all(20.0),
@@ -264,23 +270,43 @@ class _DesktopAdminProjectsState extends State<DesktopAdminProjects> {
                                 SizedBox(
                                   height: 10.0,
                                 ),
-                                Text(
-                                  'Project Manager Name',
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10.0,
-                                ),
-                                Text(
-                                  'Project Description',
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: width * 0.01,
-                                  ),
-                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          'Project Manager Name',
+                                          style: TextStyle(
+                                            fontSize: width * 0.01,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 10.0,
+                                        ),
+                                        Text(
+                                          'Project Description',
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: width * 0.01,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    CircularPercentIndicator(
+                                      radius: 60.0,
+                                      lineWidth: 5.0,
+                                      percent: 0.85,
+                                      center: new Text("85%"),
+                                      backgroundColor: Colors.redAccent,
+                                      progressColor: Colors.greenAccent[700],
+                                    ),
+                                  ],
+                                )
                               ],
                             ),
                           ),
@@ -605,7 +631,10 @@ class _MobileAdminProjectsState extends State<MobileAdminProjects> {
                 Container(
                   child: FlatButton.icon(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => AddProject()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AddProject()));
                     },
                     hoverColor: Colors.transparent,
                     icon: Icon(

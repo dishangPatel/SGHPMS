@@ -116,7 +116,7 @@ class _DesktopAdminDashboardState extends State<DesktopAdminDashboard>
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            'Project Manager'.toUpperCase(),
+                            'ADMIN'.toUpperCase(),
                             style: TextStyle(
                                 fontSize: width * 0.0105,
                                 color: Colors.white,
